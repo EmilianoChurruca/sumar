@@ -7,37 +7,37 @@ L = { a^n b^m c^(n+m) / w pertenece Sigma* con Sigma = { a, b, c }
 """
 las_transiciones={
     'q0': {
-        'a': ('q1', 'x', 'R'),  # encuentro un a, la tacho con x
-        'b': ('q2', 'y', 'R'),  # encuentro una b, ya no hay a, la tacho con y
+        'a': ('q1', 'x', 'R'),  
+        'b': ('q2', 'y', 'R'),  
     },
     'q1': {
-        'a': ('q1', 'a', 'R'),  # encuentro una a y sigo buscando el 
-        'b': ('q2', 'b', 'R'),  # 
+        'a': ('q1', 'a', 'R'),  
+        'b': ('q2', 'b', 'R'),  
     },
     'q2': {
-        'b': ('q2', 'b', 'R'),  # 
+        'b': ('q2', 'b', 'R'), 
         'z': ('q2', 'z', 'R'),
-        'c': ('q3', 'z', 'R')   # 
+        'c': ('q3', 'z', 'R')   
     },
     'q3': {
-        'c': ('q4', 'c', 'L'), # 
-        '~': ('q5', '~', 'L') # 
+        'c': ('q4', 'c', 'L'),  
+        '~': ('q5', '~', 'L') 
     },
     'q4': {
         'a': ('q4', 'a', 'L'),
         'b': ('q4', 'b', 'L'),
         'c': ('q4', 'c', 'L'),
         'z': ('q4', 'z', 'L'),
-        'x': ('q0', 'x', 'R'), # 
-        'y': ('q0', 'y', 'R')  # 
+        'x': ('q0', 'x', 'R'), 
+        'y': ('q0', 'y', 'R')   
     },
     'q5': {
-        'z': ('q5', 'z', 'L'), # 
-        'y': ('q6', 'y', 'L')  # 
+        'z': ('q5', 'z', 'L'),  
+        'y': ('q6', 'y', 'L')  
     },
     'q6': {
         'y': ('q6', 'y', 'L'),
-        'x': ('q7', 'x', 'L'), # 
+        'x': ('q7', 'x', 'L'),  
     },
     'q7': {
         'x': ('q7', 'x', 'L'),
